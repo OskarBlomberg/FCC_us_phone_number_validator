@@ -14,6 +14,15 @@ const renderOutput = (num) => {
     : "Invalid US number: " + inputEl.value;
 };
 
+inputEl.addEventListener("keydown", (event) => {
+  if (event.key === "Enter")
+    if (inputEl.value.trim()) {
+      renderOutput(validateInputUS(inputEl));
+    } else {
+      alert("Please provide a phone number"); //As per instruction
+    }
+});
+
 checkBtn.addEventListener("click", () => {
   if (inputEl.value.trim()) {
     renderOutput(validateInputUS(inputEl));
