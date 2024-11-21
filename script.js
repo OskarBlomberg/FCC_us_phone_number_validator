@@ -4,14 +4,14 @@ const checkBtn = document.getElementById("check-btn");
 const clearBtn = document.getElementById("clear-btn");
 
 const validateInputUS = (input) => {
-  const acceptedValues = /1?[ ]?(\(?\d{3})\)?( -)?(\d{3})( -)?(\d{4})/;
+  const acceptedValues = /^1?[ ]?(\(\d{3}\)|\d{3})[ -]?\d{3}[ -]?\d{4}$/;
   return acceptedValues.test(input.value.trim());
 };
 
 const renderOutput = (num) => {
   outputEl.textContent = num
-    ? "Valid US number: " + inputEl.value
-    : "Invalid US number: " + inputEl.value;
+    ? "Valid US number: " + inputEl.value.trim()
+    : "Invalid US number: " + inputEl.value.trim();
 };
 
 inputEl.addEventListener("keydown", (event) => {
