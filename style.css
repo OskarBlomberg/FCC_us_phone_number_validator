@@ -6,16 +6,31 @@
   padding: 0;
 }
 
+.no-wrap {
+  white-space: nowrap;
+}
+
 body {
   height: 100vh;
   width: 100%;
   background-color: aliceblue;
+  background: linear-gradient(hwb(0 100% 0% / 0.9), rgba(255, 255, 255, 0.9)),
+    no-repeat center
+      url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/1280px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  padding-top: 30vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
 footer {
-  background-color: black;
+  background-color: rgb(1, 16, 59);
   height: 56px;
   width: 100%;
   position: fixed;
@@ -24,6 +39,12 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+p {
+  font-size: 1.5rem;
+}
+
+/* INPUTS AND BUTTONS */
 
 button,
 input {
@@ -35,6 +56,7 @@ input {
 input {
   width: 90%;
   max-width: 500px;
+  border-radius: 8px;
 }
 
 .btn-container {
