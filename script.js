@@ -14,14 +14,11 @@ const renderOutput = (num) => {
     : "Invalid US number: " + inputEl.value;
 };
 
-const clearInput = (input) => (input.value = "");
-
 checkBtn.addEventListener("click", () => {
   if (inputEl.value.trim()) {
     renderOutput(validateInputUS(inputEl));
-    clearInput(inputEl);
   } else {
-    alert("Please provide a phone number");
+    alert("Please provide a phone number"); //As per instruction
   }
 });
 
